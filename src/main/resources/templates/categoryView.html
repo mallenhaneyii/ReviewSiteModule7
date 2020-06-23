@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <title th:text="${category.phase}"></title>
+
+
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <a class="backHome" href="/categories">Back to Phases</a>
+    </header>
+    <section>
+        <h2 th:text="${category.phase}"></h2>
+
+        <nav>
+            <p th:each="movie:${category.movies}">
+                <a th:href="@{'/movies/'+ ${movie.id}}"> <img
+                        th:src="${movie.imageUrl}"></a>
+            </p>
+        </nav>
+    </section>
+</div>
+<footer>
+    &copy; mallenhaneyii
+</footer>
+</body>
+</html>

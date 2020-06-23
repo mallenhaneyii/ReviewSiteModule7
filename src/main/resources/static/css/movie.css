@@ -1,0 +1,47 @@
+h1 {
+    padding-top: 1em;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    padding-top: 1em;
+}
+
+.container {
+    margin: 2rem auto;
+    max-width: 50%;
+    width: 90%;
+    text-align: center;
+}
+
+img {
+    max-width: 50%;
+    /*max-height: 725px;*/
+}
+
+.stars {
+    font-size: 2em;
+    color: #504a4a;
+}
+
+.director {
+    font-size: 2em;
+}
+
+.review {
+    padding-top: 2em;
+}
+
+.reviewContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 6px solid #e23636;
+    background: lightgray;
+    text-align: left;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em 2em 2em 2em;
+}
+

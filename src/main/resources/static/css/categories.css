@@ -1,0 +1,20 @@
+
+main {
+    display: grid;
+    margin: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 57px;
+    width: 65%;
+}
+
+.categoriesHeader {
+    padding-bottom: 2em;
+}
+
+.header h1 {
+    width: 25%;
+    margin: auto auto;
+}
+
+main img:hover {
+    border: 10px solid #e23636;}

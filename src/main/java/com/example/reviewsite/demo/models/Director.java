@@ -17,6 +17,7 @@ public class Director {
     private Long id;
     private String firstName;
     private String lastName;
+    private String imageUrl;
     @OneToMany(mappedBy = "director")
     private Collection<Movie> movies;
 
@@ -26,13 +27,16 @@ public class Director {
 
     public String getLastName() { return lastName; }
 
+    public String getImageUrl() { return imageUrl; }
+
     public Collection<Movie> getMovies() { return movies; }
 
     public Director() { }
 
-    public Director(String firstName, String lastName, Movie...movies) {
+    public Director(String firstName, String lastName, String imageUrl, Movie...movies) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.imageUrl = imageUrl;
         this.movies = new ArrayList<>(Arrays.asList(movies));
     }
 

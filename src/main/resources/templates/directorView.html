@@ -19,6 +19,8 @@
     <section>
         <h2 th:href="@{'/directors/'+ ${director.lastName}}"
             th:text="${director.firstName}+' '+ ${director.lastName}"></h2>
+        <p> <img th:src="${director.imageUrl}"></p>
+        <h2>Movies</h2>
 
         <nav>
             <p th:each="movie:${director.movies}">

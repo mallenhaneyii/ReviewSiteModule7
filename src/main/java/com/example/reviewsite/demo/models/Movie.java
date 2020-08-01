@@ -17,6 +17,7 @@ public class Movie {
     @ManyToOne
     private Director director;
     private String releaseYear;
+    @Lob
     private String reviewContent;
     @ManyToOne
     private Category category;

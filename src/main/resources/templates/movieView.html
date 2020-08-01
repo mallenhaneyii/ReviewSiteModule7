@@ -13,25 +13,42 @@
 
 <body>
 
+<nav>
+    <img src="\images\title.jpg">
+    <a class="backHome" href="/categories">Home</a>
+    <a class="backToPhase" th:href="'/categories/'+${movie.category.phase}" th:text="${movie.category.phase}"></a>
+</nav>
+
 <div class="container">
-    <section class="reviewDetails">
-        <a class="backHome" th:href="'/categories/'+${movie.category.phase}" th:text="${movie.category.phase}"></a>
-        <h1 class="movieTitle" th:text="${movie.title}"></h1>
-        <img class="reviewImage" th:src="${movie.imageUrl}">
-        <h2>Directed by:</h2>
-        <p class="director" th:each="director: ${movie.director}">
-            <a th:href="@{'/directors/'+ ${director.lastName}}"
-               th:text="${director.firstName}+' '+ ${director.lastName}"></a></p>
-        <h2>Starring:</h2>
-        <p class="stars" th:each="star: ${movie.stars}">
-            <a th:href="@{'/stars/'+ ${star.lastName}}"
-               th:text="${star.firstName}+' '+ ${star.lastName}"></a></p>
-        <h2 class="Review">Review:</h2>
+    <section class="moviePoster">
+        <img class="movieImage" th:src="${movie.imageUrl}">
+    </section>
+
+    <section class="reviewSection">
+        <h3 class="Review">Review:</h3>
         <p class="reviewContent" th:text="${movie.reviewContent}"></p>
     </section>
-    <footer>
-        &copy; mallenhaneyii
-    </footer>
+
+    <section class="directorAndStars">
+        <h3>Directed by:</h3>
+        <p class="director" th:each="director: ${movie.director}">
+            <a class="starName" th:href="@{'/stars/'+ ${director.lastName}}"
+               th:text="${director.firstName}+' '+ ${director.lastName}"></a>
+            <img th:src="${director.imageUrl}"><br>
+        </p>
+        <h3>Starring:</h3>
+        <p class="stars" th:each="star: ${movie.stars}">
+            <a class="starName" th:href="@{'/stars/'+ ${star.lastName}}"
+               th:text="${star.firstName}+' '+ ${star.lastName}"></a>
+            <img th:src="${star.imageUrl}"><br>
+            </p>
+    </section>
+    
+
 </div>
+
+<footer>
+    &copy; mallenhaneyii
+</footer>
 </body>
 </html>

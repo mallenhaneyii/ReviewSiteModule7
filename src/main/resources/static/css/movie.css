@@ -1,47 +1,73 @@
 h1 {
     padding-top: 1em;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1em;
+    padding-top: 1em;
+}
+
+body {
+    max-width: 75%;
+    margin: auto auto auto auto;
     padding-top: 1em;
 }
 
 .container {
-    margin: 2rem auto;
-    max-width: 50%;
-    width: 90%;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 67%;
+    grid-template-rows: 20em;
+    border: 5px solid #e23636;
 }
 
-img {
-    max-width: 50%;
-    /*max-height: 725px;*/
+.moviePoster {
+    padding: 2em 2em 2em 2em;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.moviePoster img {
+    max-height: 35em;
+}
+
+.directorAndStars {
+    display: grid;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding: 2em 2em 2em 2em;
+    margin: auto auto;
+}
+
+.director img {
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.reviewSection {
+    max-height: 100%;
+    padding: 1em 1em 1em 1em;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 .stars {
-    font-size: 2em;
     color: #504a4a;
 }
 
-.director {
-    font-size: 2em;
+.stars img {
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.review {
-    padding-top: 2em;
+.starName {
+    text-align: center;
 }
 
 .reviewContent {
-    display: grid;
-    grid-template-columns: 1fr;
-    border: 6px solid #e23636;
     background: lightgray;
-    text-align: left;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2em 2em 2em 2em;
+    padding: 1em 1em 1em 1em;
 }
 

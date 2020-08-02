@@ -13,6 +13,7 @@ public class Star {
     private String firstName;
     private String lastName;
     private String imageUrl;
+    private String highlightsUrl;
     @ManyToMany(mappedBy = "stars")
     private Collection<Movie> movies;
 
@@ -28,16 +29,19 @@ public class Star {
 
     public String getImageUrl() { return imageUrl; }
 
+    public String getHighlightsUrl() { return highlightsUrl; }
+
     public Collection<Movie> getMovies() {
         return movies;
     }
 
     public Star() { }
 
-    public Star(String firstName, String lastName, String imageUrl) {
+    public Star(String firstName, String lastName, String imageUrl, String highlightsUrl) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.imageUrl = imageUrl;
+        this.highlightsUrl= highlightsUrl;
     }
 
     @Override

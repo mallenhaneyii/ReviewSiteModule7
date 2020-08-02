@@ -14,9 +14,12 @@ public class Movie {
     private long id;
     private String title;
     private String imageUrl;
+    private String trailerUrl;
     @ManyToOne
     private Director director;
-    private String releaseYear;
+    private int releaseYear;
+    private int runningTime;
+    private String boxOfficeGross;
     @Lob
     private String reviewContent;
     @ManyToOne
@@ -36,13 +39,19 @@ public class Movie {
         return imageUrl;
     }
 
+    public String getTrailerUrl() { return trailerUrl; }
+
     public Director getDirector() {
         return director;
     }
 
-    public String getReleaseYear() {
+    public int getReleaseYear() {
         return releaseYear;
     }
+
+    public int getRunningTime() { return runningTime; }
+
+    public String getBoxOfficeGross() { return boxOfficeGross; }
 
     public String getReviewContent() {
         return reviewContent;
@@ -59,13 +68,16 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(String title, String imageUrl, Director director, Category category, String releaseYear,  String reviewContent, Star...stars) {
+    public Movie(String title, String imageUrl, String trailerUrl, Director director, Category category, int releaseYear, int runningTime, String boxOfficeGross, String reviewContent, Star... stars) {
         this.id = id;
         this.title = title;
         this.imageUrl = imageUrl;
+        this.trailerUrl = trailerUrl;
         this.director = director;
         this.category = category;
         this.releaseYear = releaseYear;
+        this.runningTime = runningTime;
+        this.boxOfficeGross = boxOfficeGross;
         this.reviewContent = reviewContent;
         this.stars = new ArrayList<>(Arrays.asList(stars));
     }

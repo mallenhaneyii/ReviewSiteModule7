@@ -16,34 +16,49 @@
 <nav>
     <img src="\images\title.jpg">
     <a class="backHome" href="/categories">Home</a>
-    <a class="backToPhase" th:href="'/categories/'+${movie.category.phase}" th:text="${movie.category.phase}"></a>
 </nav>
 
 <div class="container">
+    <div class="posterAndPeople">
     <section class="moviePoster">
         <img class="movieImage" th:src="${movie.imageUrl}">
     </section>
 
-    <section class="reviewSection">
-        <h3 class="Review">Review:</h3>
-        <p class="reviewContent" th:text="${movie.reviewContent}"></p>
-    </section>
-
     <section class="directorAndStars">
-        <h3>Directed by:</h3>
+        <h2>Directed by:</h2>
         <p class="director" th:each="director: ${movie.director}">
-            <a class="starName" th:href="@{'/stars/'+ ${director.lastName}}"
+            <a class="directorName" th:href="@{'/directors/'+ ${director.lastName}}"
                th:text="${director.firstName}+' '+ ${director.lastName}"></a>
             <img th:src="${director.imageUrl}"><br>
         </p>
-        <h3>Starring:</h3>
+        <h2>Starring:</h2>
         <p class="stars" th:each="star: ${movie.stars}">
             <a class="starName" th:href="@{'/stars/'+ ${star.lastName}}"
                th:text="${star.firstName}+' '+ ${star.lastName}"></a>
             <img th:src="${star.imageUrl}"><br>
-            </p>
+        </p>
     </section>
-    
+    </div>
+
+    <section class="trailer">
+        <iframe class="trailerVideo" width="655" height="277" th:src="${movie.trailerUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section class="stats">
+        <h4>Release Year</h4>
+        <p class="releaseYear" th:text="${movie.releaseYear}">Release Year</p>
+        <h4>Running Time</h4>
+        <p class="runningTime" th:text="${movie.runningTime} + ' minutes'">Running Time</p>
+        <h4>Box Office Gross (Domestic)</h4>
+        <p class="boxOfficeGross" th:text="${movie.boxOfficeGross}">Box Office Gross (Domestic)</p>
+    </section>
+
+    <section class="reviewSection">
+        <h4 class="Review">Review:</h4>
+        <p class="reviewContent" th:text="${movie.reviewContent}"></p>
+    </section>
+
+
 
 </div>
 

@@ -4,8 +4,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1em;
-    padding-top: 1em;
+    font-size: 2em;
 }
 
 body {
@@ -21,7 +20,7 @@ body {
     border: 5px solid #e23636;
 }
 
-.posterAndPeople {
+.headShotAndMovies {
     display: grid;
     padding: 2em 2em 2em 2em;
     grid-row-start: 1;
@@ -29,36 +28,22 @@ body {
     margin: auto auto;
 }
 
-.moviePoster img {
+.headShot img {
     max-height: 35em;
 }
 
-.director img {
+.movies img {
     width: 250px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.stars {
-    color: #504a4a;
-}
-
-.stars img {
-    width: 250px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.starName {
-    text-align: center;
-}
-
-.trailer {
+.highlights {
     padding-top: 2em;
     margin: auto;
 }
 
-.trailerVideo {
+.highlightVideo {
     border: 3px solid #504a4a;
 }
 
@@ -67,15 +52,14 @@ body {
     text-align: center;
 }
 
-.reviewSection {
+.bio {
     max-height: 100%;
     padding: 3em 1em 1em 1em;
     margin-bottom: auto;
     margin-top: auto;
 }
 
-.reviewContent {
+.bioContent {
     background: lightgray;
     padding: 1em 1em 1em 1em;
 }
-

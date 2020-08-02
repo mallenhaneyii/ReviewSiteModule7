@@ -29,7 +29,7 @@ h2 {
 
 footer {
     background-color: #e23636;
-    position: fixed;
+    position: flex;
     bottom: 0;
     margin-left: auto;
     margin-right: auto;

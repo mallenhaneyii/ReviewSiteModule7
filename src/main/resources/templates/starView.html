@@ -5,31 +5,58 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="../css/category.css">
     <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/star.css">
     <title th:text="${star.lastName}" ></title>
 
 
 </head>
-<body>
-<div class="container">
-    <header class="header">
-        <a class="backHome" href="/categories">Back to Phases</a>
-    </header>
-    <section>
-        <h2 th:href="@{'/stars/'+ ${star.lastName}}"
-            th:text="${star.firstName}+' '+ ${star.lastName}"></h2>
-        <p> <img th:src="${star.imageUrl}"></p>
-        <h2>Movies</h2>
 
-        <nav>
-            <p th:each="movie:${star.movies}">
-                <a th:href="@{'/movies/'+ ${movie.id}}"> <img
-                        th:src="${movie.imageUrl}"></a>
+<body>
+
+<nav>
+    <img src="\images\title.jpg">
+    <a class="backHome" href="/categories">Home</a>
+</nav>
+
+<div class="container">
+    <div class="headShotAndMovies">
+        <section class="headShot">
+            <img class="starImage" th:src="${star.imageUrl}">
+            <h2 th:text="${star.firstName} + ${star.lastName}"></h2>
+        </section>
+
+        <section class="movies">
+            <h2>Starred In:</h2>
+            <p class="movies" th:each="movie: ${star.movies}">
+                <a class="movieName" th:href="@{'/movies/'+ ${movie.id}}">
+                <img th:src="${movie.imageUrl}"></a><br>
             </p>
-        </nav>
+        </section>
+    </div>
+
+    <section class="highlights">
+        <iframe class="highlightVideo" width="655" height="277" th:src="${star.highlightsUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
+
+<!--    <section class="stats">-->
+<!--        <h4>Oscar Nominations:</h4>-->
+<!--        <p class="oscarNominations" th:text="${star.oscarNominations}"></p>-->
+<!--        <h4>Oscar Wins:</h4>-->
+<!--        <p class="oscarWins" th:text="${star.oscarWins}"></p>-->
+<!--        <h4>Date Of Birth:</h4>-->
+<!--        <p class="dateOfBirth" th:text="${star.dateOfBirth}"></p>-->
+<!--    </section>-->
+
+<!--    <section class="bio">-->
+<!--        <h4 class="bioTitle">Bio:</h4>-->
+<!--        <p class="bioContent" th:text="${star.bioContent}"></p>-->
+<!--    </section>-->
+
+
+
 </div>
+
 <footer>
     &copy; mallenhaneyii
 </footer>

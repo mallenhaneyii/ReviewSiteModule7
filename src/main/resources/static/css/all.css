@@ -9,8 +9,16 @@
     font-size: 16px;
 }
 
+.container {
+    display: grid;
+    border: 5px solid #e23636;
+}
+
 body {
     background: #dbd9cf;
+    max-width: 75%;
+    margin: auto auto auto auto;
+    padding-top: 1em;
 }
 
 img {
@@ -29,7 +37,6 @@ h2 {
 
 footer {
     background-color: #e23636;
-    position: flex;
     bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -40,19 +47,11 @@ footer {
 
 nav {
     background: #e23636;
-    display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto auto;
-    text-align: center;
-    padding: 1em 1em 1em 1em;
 }
 
 nav img {
     max-height: 10em;
-    margin-top: auto;
-    margin-bottom: auto;
+    left: 0;
 }
 
 nav a {

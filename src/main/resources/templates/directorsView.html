@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/directors.css">
     <link rel="stylesheet" href="../css/all.css">
-    <title class="title">Marvel Phases</title>
+    <title class="title">All Directors</title>
 </head>
 
 <body>
 
-<div class="container"></div>
-
-<header class="header">
-    <h1>Directors></h1>
-</header>
+<nav>
+    <img src="\images\title.jpg">
+    <a class="backHome" href="/categories/">Phases</a>
+    <a class="stars" href="/stars/">Stars</a>
+    <a class="directors" href="/directors/">Directors</a>
+    <a class-="movies" href="/movies/">Movies</a>
+</nav>
 
 <main>
-    <p class="listOfCategories" th:each="director:${movies}"><a th:href="@{'/categories/'+ ${category.phase}}"> <img
-            th:src="${category.imageUrl}"></a>
-    </p>
+    <div class="container">
+        <h2 class="phase">Directors</h2>
+        <p class="listOfDirectors" th:each="director:${directors}">
+            <a th:href="@{'/directors/'+ ${director.lastName}}"
+               th:text="${director.firstName}+' '+ ${director.lastName}"></a><br>
+            <img th:src="${director.imageUrl}"></a>
+        </p>
+    </div>
 
 </main>
-
-</div>
 
 <footer>
     &copy; mallenhaneyii

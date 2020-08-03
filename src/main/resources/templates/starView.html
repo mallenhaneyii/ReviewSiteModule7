@@ -16,14 +16,17 @@
 
 <nav>
     <img src="\images\title.jpg">
-    <a class="backHome" href="/categories">Home</a>
+    <a class="backHome" href="/categories/">Phases</a>
+    <a class="stars" href="/stars/">Stars</a>
+    <a class="directors" href="/directors/">Directors</a>
+    <a class-="movies" href="/movies/">Movies</a>
 </nav>
 
 <div class="container">
     <div class="headShotAndMovies">
         <section class="headShot">
             <img class="starImage" th:src="${star.imageUrl}">
-            <h2 th:text="${star.firstName} + ${star.lastName}"></h2>
+            <h2 th:text="${star.firstName} + ' ' + ${star.lastName}"></h2>
         </section>
 
         <section class="movies">

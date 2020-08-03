@@ -8,17 +8,9 @@ h2 {
     padding-top: 1em;
 }
 
-body {
-    max-width: 75%;
-    margin: auto auto auto auto;
-    padding-top: 1em;
-}
-
 .container {
-    display: grid;
     grid-template-columns: 33% 67%;
     grid-template-rows: 20em;
-    border: 5px solid #e23636;
 }
 
 .posterAndPeople {

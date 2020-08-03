@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Books</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/directors.css">
+    <title class="title">All Movies</title>
 </head>
+
 <body>
-<h1>Movies</h1>
+
+<nav>
+    <img src="\images\title.jpg">
+    <a class="backHome" href="/categories/">Phases</a>
+    <a class="stars" href="/stars/">Stars</a>
+    <a class="directors" href="/directors/">Directors</a>
+    <a class-="movies" href="/movies/">Movies</a>
+</nav>
+
+<main>
+
+    <div class="container">
+        <h2 class="phase">Movies</h2>
+        <p class="listOfMovies" th:each="movie:${movies}"><a th:href="@{'/movies/'+ ${movie.id}}"> <img
+                th:src="${movie.imageUrl}"></a>
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    &copy; mallenhaneyii
+</footer>
 </body>
+
 </html>

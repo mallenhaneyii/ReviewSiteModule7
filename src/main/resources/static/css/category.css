@@ -1,20 +1,24 @@
-.container {
-    margin: 2rem auto;
-    max-width: 50%;
-    width: 90%;
+* {
+    text-align: center;
 }
 
-nav {
-    display: grid;
+.container {
+    margin: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 57px;
-    padding-top: 2em;
+}
+
+.phase {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.container img {
+    max-width: 80%;
 }
 
 section img:hover {
     border: 10px solid #e23636;}
 
-img {
-    max-height: 725px;
-}
 

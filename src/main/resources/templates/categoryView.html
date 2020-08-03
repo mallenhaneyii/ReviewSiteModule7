@@ -12,23 +12,25 @@
 
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <a class="backHome" href="/categories">Back to Phases</a>
-    </header>
-    <section>
-        <h2 th:text="${category.phase}"></h2>
 
-        <nav>
-            <p th:each="movie:${category.movies}">
-                <a th:href="@{'/movies/'+ ${movie.id}}"> <img
-                        th:src="${movie.imageUrl}"></a>
-            </p>
-        </nav>
-    </section>
+<nav>
+    <img src="\images\title.jpg">
+    <a class="backHome" href="/categories/">Phases</a>
+    <a class="stars" href="/stars/">Stars</a>
+    <a class="directors" href="/directors/">Directors</a>
+    <a class-="movies" href="/movies/">Movies</a>
+</nav>
+
+<div class="container">
+    <h2 class="phase" th:text="${category.phase}"></h2>
+        <p th:each="movie:${category.movies}">
+            <a th:href="@{'/movies/'+ ${movie.id}}"> <img
+                    th:src="${movie.imageUrl}"></a>
+        </p>
 </div>
-<footer>
-    &copy; mallenhaneyii
-</footer>
+
+    <footer>
+        &copy; mallenhaneyii
+    </footer>
 </body>
 </html>

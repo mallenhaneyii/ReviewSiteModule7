@@ -1,5 +1,5 @@
 * {
-    font-family: sans-serif;
+    font-family: Tahoma;
     line-height: 1.618em;
     box-sizing: border-box;
     margin: 0;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
     padding-top: 1em;
 }
 
@@ -47,16 +47,22 @@ footer {
 
 nav {
     background: #e23636;
+    text-align: center;
+    margin: auto;
+    border-top: #e23636 solid 15px;
 }
+
+nav a {
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: 1.5em;
+}
+
 
 nav img {
     max-height: 10em;
     left: 0;
-}
-
-nav a {
-    font-size: 1.5em;
-    padding-right: 1em;
+    justify-content: center;
 }
 
 nav a:hover {

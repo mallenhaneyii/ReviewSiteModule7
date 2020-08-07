@@ -30,15 +30,13 @@
     <section class="directorAndStars">
         <h2>Directed by:</h2>
         <p class="director" th:each="director: ${movie.director}">
-            <a class="directorName" th:href="@{'/directors/'+ ${director.lastName}}"
-               th:text="${director.firstName}+' '+ ${director.lastName}"></a>
-            <img th:src="${director.imageUrl}"><br>
+            <a class="directorName" th:text="${director.firstName}+' '+ ${director.lastName}"></a>
+            <a th:href="@{'/directors/'+ ${director.lastName}}"> <img th:src="${director.imageUrl}"><a/><br>
         </p>
         <h2>Starring:</h2>
         <p class="stars" th:each="star: ${movie.stars}">
-            <a class="starName" th:href="@{'/stars/'+ ${star.lastName}}"
-               th:text="${star.firstName}+' '+ ${star.lastName}"></a>
-            <img th:src="${star.imageUrl}"><br>
+            <a class="starName" th:text="${star.firstName}+' '+ ${star.lastName}"></a>
+            <a th:href="@{'/stars/'+ ${star.lastName}}"> <img th:src="${star.imageUrl}"><a/><br>
         </p>
     </section>
     </div>

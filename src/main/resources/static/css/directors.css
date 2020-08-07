@@ -9,3 +9,25 @@
 .listOfMovies {
     padding-bottom: 3em;
 }
+
+.list {
+    position: relative;
+    display: inline-block;
+}
+
+.list .text {
+    font-size: 20px;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    width: 78%;
+    text-align: center;
+    background: rgba(226, 54, 54, 0.8);
+}
+
+img:hover {
+    border: 10px solid #e23636;
+}

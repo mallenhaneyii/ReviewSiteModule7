@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+}
+
+.container {
+    margin: auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.phase {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.container img {
+    max-width: 80%;
+}
+
+section img:hover {
+    border: 10px solid #e23636;}

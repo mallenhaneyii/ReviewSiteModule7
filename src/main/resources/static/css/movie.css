@@ -25,6 +25,12 @@ h2 {
     max-height: 35em;
 }
 
+.director {
+    position: relative;
+    display: inline-block;
+    color: #504a4a;
+}
+
 .director img {
     width: 250px;
     margin-right: auto;
@@ -33,6 +39,8 @@ h2 {
 
 .stars {
     color: #504a4a;
+    position: relative;
+    display: inline-block;
 }
 
 .stars img {
@@ -71,3 +79,32 @@ h2 {
     padding: 1em 1em 1em 1em;
 }
 
+.stars .starName{
+    font-size: 20px;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    width: 90%;
+    text-align: center;
+    background: rgba(226, 54, 54, 0.8);
+}
+
+.director .directorName{
+    font-size: 20px;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    width: 90%;
+    text-align: center;
+    background: rgba(226, 54, 54, 0.8);
+}
+
+.directorAndStars img:hover {
+    border: 10px solid #e23636;
+}

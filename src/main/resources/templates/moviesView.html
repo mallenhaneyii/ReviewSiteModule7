@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/stars.css">
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/directors.css">
     <title class="title">All Movies</title>
@@ -23,7 +23,7 @@
 <main>
 
     <div class="container">
-        <h2 class="phase">Movies</h2>
+        <h1 class="phase">Movies</h1>
         <p class="listOfMovies" th:each="movie:${movies}"><a th:href="@{'/movies/'+ ${movie.id}}"> <img
                 th:src="${movie.imageUrl}"></a>
         </p>

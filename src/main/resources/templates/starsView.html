@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/stars.css">
     <link rel="stylesheet" href="../css/directors.css">
     <link rel="stylesheet" href="../css/all.css">
     <title class="title">All Stars</title>
@@ -20,13 +20,13 @@
     <a class-="movies" href="/movies/">Movies</a>
 </nav>
 
+
 <main>
     <div class="container">
-        <h2 class="phase">Stars</h2>
-        <p class="listOfStars" th:each="star:${stars}">
-            <a th:href="@{'/stars/'+ ${star.lastName}}"
-               th:text="${star.firstName}+' '+ ${star.lastName}"></a><br>
-            <img th:src="${star.imageUrl}"></a>
+        <h1 class="phase">Stars</h1>
+        <p class="list" th:each="star:${stars}">
+            <a class="text" th:text="${star.firstName}+' '+ ${star.lastName}"></a><br>
+            <a th:href="@{'/stars/'+ ${star.lastName}}"> <img th:src="${star.imageUrl}"></a>
         </p>
     </div>
 

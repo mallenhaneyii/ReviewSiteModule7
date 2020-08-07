@@ -63,3 +63,7 @@ body {
     background: lightgray;
     padding: 1em 1em 1em 1em;
 }
+
+img:hover {
+    border: 10px solid #e23636;
+}

@@ -23,7 +23,8 @@
 
     <div class="container">
         <h2 class="phase">Phases</h2>
-        <p class="listOfCategories" th:each="category:${categories}"><a th:href="@{'/categories/'+ ${category.phase}}"> <img
+        <p class="listOfCategories" th:each="category:${categories}">
+            <a th:href="@{'/categories/'+ ${category.phase}}"> <img
                 th:src="${category.imageUrl}"></a>
         </p>
     </div>

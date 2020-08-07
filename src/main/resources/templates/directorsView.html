@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/stars.css">
     <link rel="stylesheet" href="../css/directors.css">
     <link rel="stylesheet" href="../css/all.css">
     <title class="title">All Directors</title>
@@ -22,11 +22,10 @@
 
 <main>
     <div class="container">
-        <h2 class="phase">Directors</h2>
-        <p class="listOfDirectors" th:each="director:${directors}">
-            <a th:href="@{'/directors/'+ ${director.lastName}}"
-               th:text="${director.firstName}+' '+ ${director.lastName}"></a><br>
-            <img th:src="${director.imageUrl}"></a>
+        <h1 class="phase">Directors</h1>
+        <p class="list" th:each="director:${directors}">
+            <a class="text" th:text="${director.firstName}+' '+ ${director.lastName}"></a><br>
+            <a th:href="@{'/directors/'+ ${director.lastName}}"> <img th:src="${director.imageUrl}"></a>
         </p>
     </div>
 
